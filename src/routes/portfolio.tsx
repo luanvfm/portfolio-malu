@@ -12,12 +12,13 @@ export const Route = createFileRoute("/portfolio")({
       {
         name: "description",
         content:
-          "Coberturas de futebol e futsal de Maria Luiza para Mosaico Esportivo, BetoCastTV, Federação Pernambucana de Futsal e @malu.informa.",
+          "Minhas coberturas de futebol e futsal para Mosaico Esportivo, BetoCastTV, Federação Pernambucana de Futsal e @malu.informa.",
       },
       { property: "og:title", content: "Portfólio | Malu Informa" },
       {
         property: "og:description",
-        content: "Matérias de esporte e cultura pernambucana em veículos de referência.",
+        content:
+          "Minhas reportagens e coberturas de futebol e futsal para Mosaico Esportivo, BetoCastTV e Federação Pernambucana de Futsal.",
       },
     ],
   }),
@@ -43,12 +44,8 @@ function Portfolio() {
   return (
     <div className="mx-auto max-w-6xl px-5 py-16 md:py-20">
       <Reveal>
-        <h1 className="font-display text-4xl text-primary md:text-5xl">
-          {t("portfolio.title")}
-        </h1>
-        <p className="mt-4 max-w-xl text-lg text-muted-foreground">
-          {t("portfolio.subtitle")}
-        </p>
+        <h1 className="font-display text-4xl text-primary md:text-5xl">{t("portfolio.title")}</h1>
+        <p className="mt-4 max-w-xl text-lg text-muted-foreground">{t("portfolio.subtitle")}</p>
       </Reveal>
 
       <Reveal delay={0.05}>
@@ -60,7 +57,7 @@ function Portfolio() {
               aria-pressed={filter === f.key}
               onClick={() => setFilter(f.key)}
               className={
-                "rounded-sm border px-4 py-2 text-sm font-semibold transition-colors " +
+                "min-h-11 rounded-sm border px-4 py-2 text-sm font-semibold transition-colors " +
                 (filter === f.key
                   ? "border-primary bg-primary text-primary-foreground"
                   : "border-border bg-card text-muted-foreground hover:border-secondary hover:text-primary")

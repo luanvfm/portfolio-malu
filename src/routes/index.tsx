@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Instagram, Trophy, Landmark, Mic, Megaphone } from "lucide-react";
 import { useI18n, CONTACT } from "@/lib/i18n";
 import { Reveal } from "@/components/Reveal";
-import { MediaPlaceholder } from "@/components/MediaPlaceholder";
+import { FeaturedReport } from "@/components/FeaturedReport";
 import { works } from "@/lib/portfolio-data";
 import { WorkCard } from "@/components/WorkCard";
 import { featuredInstagramPosts } from "@/lib/instagram-posts";
@@ -23,7 +23,11 @@ function Index() {
 
   const areas = [
     { icon: Trophy, t: "areas.sport.t" as const, d: "areas.sport.d" as const },
-    { icon: Landmark, t: "areas.culture.t" as const, d: "areas.culture.d" as const },
+    {
+      icon: Landmark,
+      t: "areas.culture.t" as const,
+      d: "areas.culture.d" as const,
+    },
     { icon: Mic, t: "areas.field.t" as const, d: "areas.field.d" as const },
     { icon: Megaphone, t: "areas.mkt.t" as const, d: "areas.mkt.d" as const },
   ];
@@ -33,17 +37,15 @@ function Index() {
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="azulejo absolute inset-0 opacity-[0.12]" />
-        <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 py-20 md:grid-cols-2 md:py-28">
+        <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 sm:py-20 lg:grid-cols-2 lg:py-28">
           <Reveal>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">
               {t("hero.kicker")}
             </p>
-            <h1 className="mt-4 font-display text-4xl leading-[1.05] text-primary sm:text-5xl md:text-6xl">
+            <h1 className="mt-4 font-display text-4xl leading-[1.05] text-primary sm:text-5xl lg:text-6xl">
               {t("hero.title")}
             </h1>
-            <p className="mt-5 max-w-md text-lg text-muted-foreground">
-              {t("hero.subtitle")}
-            </p>
+            <p className="mt-5 max-w-md text-lg text-muted-foreground">{t("hero.subtitle")}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 to="/contato"
@@ -60,10 +62,7 @@ function Index() {
             </div>
           </Reveal>
           <Reveal delay={0.15}>
-            <div className="relative">
-              <div className="absolute -right-3 -top-3 h-full w-full rounded-sm border-2 border-accent" />
-              <MediaPlaceholder aspect="portrait" kind="image" label={t("about.photohint")} />
-            </div>
+            <FeaturedReport work={works[0]} />
           </Reveal>
         </div>
       </section>
@@ -106,12 +105,6 @@ function Index() {
           <Reveal>
             <div className="flex items-end justify-between gap-4">
               <SectionTitle>{t("portfolio.title")}</SectionTitle>
-              <Link
-                to="/portfolio"
-                className="hidden shrink-0 items-center gap-1 text-sm font-semibold text-secondary hover:text-primary sm:inline-flex"
-              >
-                {t("portfolio.all")} <ArrowRight size={15} />
-              </Link>
             </div>
           </Reveal>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -121,12 +114,18 @@ function Index() {
               </Reveal>
             ))}
           </div>
+          <Link
+            to="/portfolio"
+            className="mt-8 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-secondary underline-offset-4 hover:text-primary hover:underline"
+          >
+            {t("portfolio.viewAll")} <ArrowRight size={16} aria-hidden="true" />
+          </Link>
         </div>
       </section>
 
       {/* INSTAGRAM */}
       <section className="mx-auto max-w-6xl px-5 py-20">
-        <Reveal className="rounded-sm border border-border bg-card p-8 text-center md:p-14">
+        <Reveal className="rounded-sm border border-border bg-card p-5 text-center sm:p-8 md:p-14">
           <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-accent text-accent-foreground">
             <Instagram size={26} />
           </span>
@@ -140,11 +139,13 @@ function Index() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${t("insta.open")}: ${post.title[lang]}`}
-                className="group relative aspect-square overflow-hidden rounded-sm bg-secondary"
+                className="group relative aspect-square overflow-hidden rounded-sm bg-secondary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
               >
                 <img
                   src={post.image}
                   alt={post.title[lang]}
+                  width={640}
+                  height={640}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />

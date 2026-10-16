@@ -69,19 +69,19 @@
   --font-sans-family: "Work Sans", system-ui, sans-serif;
 
   /* Azulejo Recife palette */
-  --background: oklch(0.976 0.012 95);      /* creme #f1faee-ish */
-  --foreground: oklch(0.32 0.06 250);       /* azul profundo #1d3557 */
+  --background: oklch(0.976 0.012 95); /* creme #f1faee-ish */
+  --foreground: oklch(0.32 0.06 250); /* azul profundo #1d3557 */
   --card: oklch(0.992 0.006 95);
   --card-foreground: oklch(0.32 0.06 250);
   --popover: oklch(0.992 0.006 95);
   --popover-foreground: oklch(0.32 0.06 250);
-  --primary: oklch(0.32 0.06 250);          /* deep blue #1d3557 */
+  --primary: oklch(0.32 0.06 250); /* deep blue #1d3557 */
   --primary-foreground: oklch(0.976 0.012 95);
-  --secondary: oklch(0.55 0.075 240);       /* azulejo blue #457b9d */
+  --secondary: oklch(0.55 0.075 240); /* azulejo blue #457b9d */
   --secondary-foreground: oklch(0.99 0.006 95);
   --muted: oklch(0.94 0.014 240);
   --muted-foreground: oklch(0.48 0.045 245);
-  --accent: oklch(0.82 0.12 85);            /* gold #e9c46a */
+  --accent: oklch(0.82 0.12 85); /* gold #e9c46a */
   --accent-foreground: oklch(0.28 0.05 250);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
@@ -139,6 +139,27 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--primary);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--secondary);
+    outline-offset: 4px;
+  }
+
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
   * {
     border-color: var(--color-border);
   }
@@ -149,8 +170,35 @@
     font-family: var(--font-sans-family);
   }
 
-  h1, h2, h3, .font-display {
+  h1,
+  h2,
+  h3,
+  .font-display {
     font-family: var(--font-display-family);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
@@ -158,10 +206,28 @@
 @utility azulejo {
   background-color: var(--color-secondary);
   background-image:
-    radial-gradient(circle at 25% 25%, color-mix(in oklab, var(--color-accent) 50%, transparent) 0 8%, transparent 9%),
-    radial-gradient(circle at 75% 75%, color-mix(in oklab, var(--color-accent) 50%, transparent) 0 8%, transparent 9%),
-    linear-gradient(45deg, color-mix(in oklab, var(--color-background) 22%, transparent) 25%, transparent 25% 75%, color-mix(in oklab, var(--color-background) 22%, transparent) 75%),
-    linear-gradient(-45deg, color-mix(in oklab, var(--color-background) 22%, transparent) 25%, transparent 25% 75%, color-mix(in oklab, var(--color-background) 22%, transparent) 75%);
+    radial-gradient(
+      circle at 25% 25%,
+      color-mix(in oklab, var(--color-accent) 50%, transparent) 0 8%,
+      transparent 9%
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      color-mix(in oklab, var(--color-accent) 50%, transparent) 0 8%,
+      transparent 9%
+    ),
+    linear-gradient(
+      45deg,
+      color-mix(in oklab, var(--color-background) 22%, transparent) 25%,
+      transparent 25% 75%,
+      color-mix(in oklab, var(--color-background) 22%, transparent) 75%
+    ),
+    linear-gradient(
+      -45deg,
+      color-mix(in oklab, var(--color-background) 22%, transparent) 25%,
+      transparent 25% 75%,
+      color-mix(in oklab, var(--color-background) 22%, transparent) 75%
+    );
   background-size: 44px 44px;
   background-position: 0 0;
 }

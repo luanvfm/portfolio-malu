@@ -10,12 +10,12 @@ export const Route = createFileRoute("/contato")({
       {
         name: "description",
         content:
-          "Entre em contato com Maria Luiza para reportagens, coberturas e parcerias. E-mail e Instagram @malu.informa.",
+          "Fale comigo sobre reportagens, coberturas e parcerias. Me encontre por e-mail, LinkedIn e Instagram @malu.informa.",
       },
       { property: "og:title", content: "Contato | Malu Informa" },
       {
         property: "og:description",
-        content: "E-mail e Instagram profissional de Maria Luiza.",
+        content: "Me encontre por e-mail, LinkedIn e no Instagram @malu.informa.",
       },
     ],
   }),
@@ -35,7 +35,7 @@ function Contact() {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: CONTACT.linkedin.replace(/^https?:\/\/(www\.)?linkedin\.com\//, ""),
+      value: t("contact.linkedin"),
       href: CONTACT.linkedin,
     },
     {
@@ -52,15 +52,15 @@ function Contact() {
       <div className="azulejo absolute inset-0 opacity-[0.1]" />
       <div className="relative mx-auto max-w-4xl px-5 py-20 md:py-28">
         <Reveal className="text-center">
-          <h1 className="font-display text-4xl text-primary md:text-5xl">
-            {t("contact.title")}
-          </h1>
+          <h1 className="font-display text-4xl text-primary md:text-5xl">{t("contact.title")}</h1>
           <p className="mx-auto mt-4 max-w-lg text-lg text-muted-foreground">
             {t("contact.subtitle")}
           </p>
         </Reveal>
 
-        <div className={`mt-12 grid gap-4 ${availableCards.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
+        <div
+          className={`mt-12 grid gap-4 ${availableCards.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}
+        >
           {availableCards.map((c, i) => (
             <Reveal key={c.label} delay={i * 0.08}>
               <a
@@ -77,13 +77,15 @@ function Contact() {
                 </span>
                 <span className="mt-1 flex items-center gap-1 font-display text-lg text-primary">
                   {c.value}
-                  <ArrowUpRight size={16} className="opacity-0 transition-opacity group-hover:opacity-100" />
+                  <ArrowUpRight
+                    size={16}
+                    className="opacity-0 transition-opacity group-hover:opacity-100"
+                  />
                 </span>
               </a>
             </Reveal>
           ))}
         </div>
-
       </div>
     </div>
   );

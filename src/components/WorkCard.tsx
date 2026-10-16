@@ -3,13 +3,7 @@ import { useI18n } from "@/lib/i18n";
 import { categoryLabelKey, type Work } from "@/lib/portfolio-data";
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 
-export function WorkCard({
-  work,
-  preview = false,
-}: {
-  work: Work;
-  preview?: boolean;
-}) {
+export function WorkCard({ work, preview = false }: { work: Work; preview?: boolean }) {
   const { t, lang } = useI18n();
 
   return (
@@ -18,19 +12,19 @@ export function WorkCard({
     >
       <div className="relative">
         <MediaPlaceholder
-          aspect={preview ? "video" : work.aspect}
+          aspect={work.aspect}
           kind={work.kind}
           src={work.image}
           alt={work.title[lang]}
         />
         {!preview && work.kind === "video" && (
-          <span className="absolute right-3 top-3 flex items-center gap-1 rounded-sm bg-primary/85 px-2 py-1 text-[11px] font-semibold text-primary-foreground">
+          <span className="absolute right-3 top-3 flex items-center gap-1 rounded-sm bg-primary px-2 py-1 text-xs font-semibold text-primary-foreground">
             <PlayCircle size={13} /> {t("portfolio.video")}
           </span>
         )}
       </div>
       <div className="p-5">
-        <span className="text-xs font-semibold uppercase tracking-wide text-secondary">
+        <span className="text-sm font-medium text-secondary">
           {t(categoryLabelKey[work.category])} •{" "}
           <a
             href={work.outletHref}
