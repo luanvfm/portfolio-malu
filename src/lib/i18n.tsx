@@ -165,8 +165,8 @@ export const dict = {
     en: "Let’s bring your next story to life.",
   },
   "footer.description": {
-    pt: "Fale comigo sobre **reportagens**, **coberturas** e projetos de comunicação.",
-    en: "Get in touch about **reporting**, **live coverage** and communications projects.",
+    pt: "Se você se interessou pelo meu trabalho, vamos conversar sobre o seu **próximo projeto**.",
+    en: "If my work caught your interest, let’s talk about your **next project**.",
   },
   "footer.cta": { pt: "Enviar uma proposta", en: "Send a proposal" },
   "footer.social": { pt: "Me acompanhe", en: "Find me online" },

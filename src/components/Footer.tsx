@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Mail, Linkedin, Instagram, ArrowUpRight } from "lucide-react";
 import { useI18n, CONTACT } from "@/lib/i18n";
 import { BrandMark } from "@/components/BrandMark";
+import { HighlightedText } from "@/components/HighlightedText";
 
 export function Footer() {
   const { t } = useI18n();
@@ -25,14 +26,7 @@ export function Footer() {
           <h2 className="max-w-[24ch] font-display text-2xl leading-snug md:text-3xl">
             {t("footer.title")}
           </h2>
-          <div className="flex shrink-0 flex-wrap items-center gap-4">
-            <a
-              href={CONTACT.emailHref}
-              className="journal-footer-cta journal-button journal-button-salmon"
-            >
-              {t("footer.cta")}
-              <ArrowUpRight size={18} aria-hidden="true" />
-            </a>
+          <div className="flex w-full max-w-sm flex-col items-start gap-4 md:items-end md:text-right">
             <div className="flex items-center gap-1">
               {channels
                 .filter((channel) => channel.href)
@@ -50,6 +44,16 @@ export function Footer() {
                   </a>
                 ))}
             </div>
+            <a
+              href={CONTACT.emailHref}
+              className="journal-footer-cta journal-button journal-button-salmon"
+            >
+              {t("footer.cta")}
+              <ArrowUpRight size={18} aria-hidden="true" />
+            </a>
+            <p className="max-w-[36ch] text-sm leading-relaxed text-primary-foreground/85">
+              <HighlightedText text={t("footer.description")} />
+            </p>
           </div>
         </div>
 
