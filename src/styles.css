@@ -193,6 +193,40 @@
   }
 }
 
+/* Emphasis keeps the prose stable while the ink underline responds to reading. */
+.journal-emphasis {
+  color: var(--primary);
+  font-weight: 650;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: background-size 320ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.journal-copy:is(:hover, :active, :focus-within) .journal-emphasis {
+  background-size: 100% 2px;
+}
+.journal-instagram .journal-emphasis,
+.journal-footer .journal-emphasis {
+  color: var(--primary-foreground);
+}
+.journal-footer :focus-visible {
+  outline-color: var(--accent);
+}
+.journal-footer-cta svg {
+  transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.journal-footer-email {
+  text-decoration-color: var(--accent);
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .journal-footer-cta:hover svg {
+    transform: translate(2px, -2px);
+  }
+}
+
 /* The approved visual world: a contemporary reporting notebook. */
 .journal-hero {
   position: relative;

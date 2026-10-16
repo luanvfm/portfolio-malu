@@ -1,3 +1,4 @@
+import { HighlightedText } from "@/components/HighlightedText";
 import { createFileRoute } from "@tanstack/react-router";
 import { Mail, Linkedin, Instagram, ArrowUpRight } from "lucide-react";
 import { useI18n, CONTACT } from "@/lib/i18n";
@@ -53,7 +54,7 @@ function Contact() {
         <Reveal className="text-center">
           <h1 className="font-display text-4xl text-primary md:text-5xl">{t("contact.title")}</h1>
           <p className="mx-auto mt-4 max-w-lg text-lg text-muted-foreground">
-            {t("contact.subtitle")}
+            <HighlightedText text={t("contact.subtitle")} />
           </p>
         </Reveal>
 

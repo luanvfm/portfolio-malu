@@ -1,3 +1,4 @@
+import { HighlightedText } from "@/components/HighlightedText";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
@@ -49,7 +50,7 @@ function Index() {
               {t("hero.kicker")}
             </p>
             <p className="mt-5 max-w-md text-lg leading-relaxed text-muted-foreground">
-              {t("hero.subtitle")}
+              <HighlightedText text={t("hero.subtitle")} />
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Link to="/portfolio" className="journal-button journal-button-salmon">
@@ -97,7 +98,7 @@ function Index() {
                 <div>
                   <h3 className="font-display text-xl text-primary sm:text-2xl">{t(a.t)}</h3>
                   <p className="mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">
-                    {t(a.d)}
+                    <HighlightedText text={t(a.d)} />
                   </p>
                 </div>
               </div>
@@ -136,7 +137,9 @@ function Index() {
             <Instagram size={32} strokeWidth={1.5} aria-hidden="true" />
             <div>
               <h2 className="font-display text-3xl sm:text-4xl">{t("insta.title")}</h2>
-              <p className="mt-3 max-w-md leading-relaxed">{t("insta.subtitle")}</p>
+              <p className="mt-3 max-w-md leading-relaxed">
+                <HighlightedText text={t("insta.subtitle")} />
+              </p>
             </div>
           </div>
           <div className="journal-instagram-posts mt-9 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-5">

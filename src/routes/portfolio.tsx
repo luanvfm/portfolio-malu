@@ -1,3 +1,4 @@
+import { HighlightedText } from "@/components/HighlightedText";
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
@@ -44,7 +45,7 @@ function Portfolio() {
       <Reveal className="journal-page-heading">
         <h1 className="font-display text-4xl text-primary md:text-5xl">{t("portfolio.title")}</h1>
         <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted-foreground">
-          {t("portfolio.subtitle")}
+          <HighlightedText text={t("portfolio.subtitle")} />
         </p>
       </Reveal>
       <div

@@ -26,8 +26,8 @@ export const dict = {
   "hero.title.culture": { pt: "cultura", en: "culture" },
   "hero.note": { pt: "Meu caderno de pautas", en: "My reporting notebook" },
   "hero.subtitle": {
-    pt: "Produzo reportagens de campo e conteúdo digital sobre esporte e cultura pernambucana.",
-    en: "I produce field reports and digital content about sports and Pernambuco culture.",
+    pt: "Produzo **reportagens de campo** e **conteúdo digital** sobre esporte e cultura pernambucana.",
+    en: "I produce **field reports** and **digital content** about sports and Pernambuco culture.",
   },
   "hero.cta": { pt: "Fale comigo", en: "Get in touch" },
   "hero.cta2": { pt: "Ver meu portfólio", en: "View my work" },
@@ -41,30 +41,30 @@ export const dict = {
   "areas.title": { pt: "Minhas áreas de atuação", en: "What I do" },
   "areas.sport.t": { pt: "Jornalismo esportivo", en: "Sports journalism" },
   "areas.sport.d": {
-    pt: "Cubro futebol e futsal com apuração e agilidade.",
-    en: "I cover football and futsal with accuracy and speed.",
+    pt: "Cubro **futebol e futsal** com apuração e agilidade.",
+    en: "I cover **football and futsal** with accuracy and speed.",
   },
   "areas.culture.t": { pt: "Cultura pernambucana", en: "Pernambuco culture" },
   "areas.culture.d": {
-    pt: "Conto histórias sobre a cultura, os eventos e a identidade de Pernambuco.",
-    en: "I tell stories about Pernambuco’s culture, events and identity.",
+    pt: "Conto histórias sobre a **cultura**, os eventos e a **identidade de Pernambuco**.",
+    en: "I tell stories about Pernambuco’s **culture**, events and **identity**.",
   },
   "areas.field.t": { pt: "Repórter de campo", en: "Field reporter" },
   "areas.field.d": {
-    pt: "Faço entrevistas e participo de transmissões ao vivo direto dos estádios.",
-    en: "I conduct interviews and contribute to live coverage from the stadiums.",
+    pt: "Faço **entrevistas** e participo de **transmissões ao vivo** direto dos estádios.",
+    en: "I conduct **interviews** and contribute to **live coverage** from the stadiums.",
   },
   "areas.mkt.t": { pt: "Jornalismo & Marketing", en: "Journalism & Marketing" },
   "areas.mkt.d": {
-    pt: "Atuo com comunicação e marketing na Federação Pernambucana de Futsal.",
-    en: "I work in communications and marketing at the Pernambuco Futsal Federation.",
+    pt: "Atuo com **comunicação e marketing** na Federação Pernambucana de Futsal.",
+    en: "I work in **communications and marketing** at the Pernambuco Futsal Federation.",
   },
 
   "portfolio.title": { pt: "Meu portfólio", en: "My work" },
   "portfolio.clippings": { pt: "Recortes do meu trabalho", en: "Clippings from my work" },
   "portfolio.subtitle": {
-    pt: "Reuni aqui minhas reportagens, transmissões e produções para diferentes veículos.",
-    en: "Here are my reports, broadcasts and productions for different outlets.",
+    pt: "Reuni aqui minhas **reportagens**, **transmissões** e produções para diferentes veículos.",
+    en: "Here are my **reports**, **broadcasts** and productions for different outlets.",
   },
   "portfolio.all": { pt: "Todos", en: "All" },
   "portfolio.sport": { pt: "Esporte", en: "Sports" },
@@ -92,8 +92,8 @@ export const dict = {
 
   "insta.title": { pt: "No meu Instagram", en: "On my Instagram" },
   "insta.subtitle": {
-    pt: "Compartilho minhas reportagens, bastidores e momentos em campo.",
-    en: "I share my reports, behind-the-scenes moments and field coverage.",
+    pt: "Compartilho minhas **reportagens**, **bastidores** e momentos em campo.",
+    en: "I share my **reports**, **behind-the-scenes** moments and field coverage.",
   },
   "insta.follow": { pt: "Seguir @malu.informa", en: "Follow @malu.informa" },
   "insta.open": {
@@ -103,12 +103,12 @@ export const dict = {
 
   "about.title": { pt: "Sobre Mim", en: "About Me" },
   "about.p1": {
-    pt: "Sou jornalista pernambucana e apaixonada por esporte e cultura. Meu trabalho inclui reportagens de campo para a BetoCastTV e o Mosaico Esportivo na cobertura do futebol.",
-    en: "I’m a Pernambuco journalist with a passion for sports and culture. My work includes field reporting for BetoCastTV and Mosaico Esportivo covering football.",
+    pt: "Sou **jornalista pernambucana** e apaixonada por esporte e cultura. Meu trabalho inclui reportagens de campo para a **BetoCastTV** e o **Mosaico Esportivo** na cobertura do futebol.",
+    en: "I’m a **Pernambuco journalist** with a passion for sports and culture. My work includes field reporting for **BetoCastTV** and **Mosaico Esportivo** covering football.",
   },
   "about.p2": {
-    pt: "Produzi matérias para a TVNova e hoje atuo como jornalista e profissional de marketing na Federação Pernambucana de Futsal. Também mantenho o perfil @malu.informa.",
-    en: "I produced stories for TVNova and now work as a journalist and marketing professional at the Pernambuco Futsal Federation. I also run @malu.informa.",
+    pt: "Produzi matérias para a **TVNova** e hoje atuo como jornalista e profissional de marketing na **Federação Pernambucana de Futsal**. Também mantenho o perfil @malu.informa.",
+    en: "I produced stories for **TVNova** and now work as a journalist and marketing professional at the **Pernambuco Futsal Federation**. I also run @malu.informa.",
   },
   "about.timeline": { pt: "Minha trajetória", en: "My journey" },
   "about.photohint": { pt: "Foto profissional", en: "Professional photo" },
@@ -123,32 +123,35 @@ export const dict = {
     en: "Field reporter — BetoCastTV",
   },
   "tl.1.d": {
-    pt: "Meu trabalho na cobertura de Sport Recife e Náutico Capibaribe.",
-    en: "My coverage of Sport Recife and Náutico Capibaribe.",
+    pt: "Meu trabalho na cobertura de **Sport Recife** e **Náutico Capibaribe**.",
+    en: "My coverage of **Sport Recife** and **Náutico Capibaribe**.",
   },
   "tl.2.t": { pt: "Matérias — TVNova", en: "Stories — TVNova" },
   "tl.2.d": {
-    pt: "Produzi conteúdo e realizei reportagens para a emissora.",
-    en: "I produced content and reported for the broadcaster.",
+    pt: "Produzi conteúdo e realizei **reportagens** para a emissora.",
+    en: "I produced content and **reported** for the broadcaster.",
   },
   "tl.3.t": {
     pt: "Federação Pernambucana de Futsal",
     en: "Pernambuco Futsal Federation",
   },
-  "tl.3.d": { pt: "Atuo com jornalismo e marketing.", en: "I work in journalism and marketing." },
+  "tl.3.d": {
+    pt: "Atuo com **jornalismo e marketing**.",
+    en: "I work in **journalism and marketing**.",
+  },
   "tl.4.t": {
     pt: "Repórter de campo — Mosaico Esportivo",
     en: "Field reporter — Mosaico Esportivo",
   },
   "tl.4.d": {
-    pt: "Faço coberturas esportivas, entrevistas e participo de pré-jogos.",
-    en: "I cover sports, conduct interviews and report before matches.",
+    pt: "Faço coberturas esportivas, **entrevistas** e participo de **pré-jogos**.",
+    en: "I cover sports, conduct **interviews** and report before **matches**.",
   },
 
   "contact.title": { pt: "Vamos conversar", en: "Let's talk" },
   "contact.subtitle": {
-    pt: "Estou disponível para reportagens, coberturas e parcerias.",
-    en: "I’m available for reporting, coverage and partnerships.",
+    pt: "Estou disponível para **reportagens**, coberturas e **parcerias**.",
+    en: "I’m available for **reporting**, coverage and **partnerships**.",
   },
   "contact.email": { pt: "E-mail", en: "Email" },
   "contact.linkedin": { pt: "Meu perfil profissional", en: "My professional profile" },
@@ -157,10 +160,16 @@ export const dict = {
     en: "Professional Instagram",
   },
 
-  "footer.tagline": {
-    pt: "Meu jornalismo tem identidade pernambucana.",
-    en: "My journalism carries Pernambuco’s identity.",
+  "footer.title": {
+    pt: "Vamos tirar sua pauta do papel?",
+    en: "Let’s bring your next story to life.",
   },
+  "footer.description": {
+    pt: "Fale comigo sobre **reportagens**, **coberturas** e projetos de comunicação.",
+    en: "Get in touch about **reporting**, **live coverage** and communications projects.",
+  },
+  "footer.cta": { pt: "Enviar uma proposta", en: "Send a proposal" },
+  "footer.social": { pt: "Me acompanhe", en: "Find me online" },
   "footer.rights": {
     pt: "Todos os direitos reservados.",
     en: "All rights reserved.",

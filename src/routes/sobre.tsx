@@ -1,3 +1,4 @@
+import { HighlightedText } from "@/components/HighlightedText";
 import { createFileRoute } from "@tanstack/react-router";
 import { motion, useReducedMotion } from "motion/react";
 import { useI18n, type DictKey } from "@/lib/i18n";
@@ -53,8 +54,12 @@ function About() {
           <div>
             <Reveal className="journal-page-heading">
               <h1 className="font-display text-4xl text-primary md:text-5xl">{t("about.title")}</h1>
-              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{t("about.p1")}</p>
-              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{t("about.p2")}</p>
+              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+                <HighlightedText text={t("about.p1")} />
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+                <HighlightedText text={t("about.p2")} />
+              </p>
             </Reveal>
 
             <Reveal delay={0.1}>
@@ -89,7 +94,9 @@ function About() {
                         t(item.t)
                       )}
                     </h3>
-                    <p className="mt-1 text-sm text-muted-foreground">{t(item.d)}</p>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      <HighlightedText text={t(item.d)} />
+                    </p>
                   </li>
                 ))}
               </ol>

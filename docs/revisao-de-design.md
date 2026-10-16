@@ -1,5 +1,15 @@
 # Revisão do acabamento
 
+## Rodapé e ênfase editorial
+
+- Rodapé reformulado com "Vamos tirar sua pauta do papel?", descrição objetiva e CTA "Enviar uma proposta", que abre o e-mail profissional confirmado.
+- Marca, endereço de e-mail e redes sociais com alvos de toque de 44px e foco salmão visível no fundo azul.
+- Frase antiga sobre identidade pernambucana removida.
+- Termos importantes nos parágrafos da página inicial, Sobre Mim, trajetória, portfólio e contato recebem ênfase semântica, com versões equivalentes em português e inglês.
+- Sublinhado salmão acompanha o hover dos trechos em negrito, com peso e largura estáveis; a preferência por movimento reduzido remove a duração da animação. Nenhum novo ponto de tabulação ou link foi adicionado aos destaques decorativos.
+- Componentização em `HighlightedText`: somente marcadores locais `**...**`, renderizados como React sem interpretar HTML.
+- Conferência das quatro páginas em 390, 768 e 1440px, em português e inglês: 24 combinações sem overflow, marcadores visíveis ou imagens quebradas. Sublinhado de hover sem alterar o tamanho ou a posição do texto; contraste dos destaques de 11,11:1 no rodapé e 6,10:1 no Instagram. TypeScript e build passaram, lint sem erros e detector tipográfico sem achados.
+
 16/10/2026. Refinamento do portfólio existente com as skills redesign-existing-projects e Impeccable; inspeção visual apoiada pelo CDP da design-taste-frontend.
 
 ## Alterações concluídas
