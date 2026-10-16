@@ -51,7 +51,7 @@ export function Footer() {
               {t("footer.cta")}
               <ArrowUpRight size={18} aria-hidden="true" />
             </a>
-            <p className="max-w-[36ch] text-sm leading-relaxed text-primary-foreground/85">
+            <p className="max-w-[36ch] text-balance text-sm leading-relaxed text-primary-foreground/85">
               <HighlightedText text={t("footer.description")} />
             </p>
           </div>
