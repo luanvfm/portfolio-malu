@@ -1,21 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { PlayCircle } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { Reveal } from "@/components/Reveal";
-import { MediaPlaceholder } from "@/components/MediaPlaceholder";
+import { WorkCard } from "@/components/WorkCard";
 import { works, categoryLabelKey, type Category } from "@/lib/portfolio-data";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
-      { title: "Portfólio — Maria Luiza, Jornalista" },
+      { title: "Portfólio | Malu Informa" },
       {
         name: "description",
         content:
-          "Reportagens, transmissões e conteúdos de Maria Luiza para BetoCastTV, TVNova, Federação Pernambucana de Futsal e @malu.informa.",
+          "Coberturas de futebol e futsal de Maria Luiza para Mosaico Esportivo, BetoCastTV, Federação Pernambucana de Futsal e @malu.informa.",
       },
-      { property: "og:title", content: "Portfólio — Maria Luiza, Jornalista" },
+      { property: "og:title", content: "Portfólio | Malu Informa" },
       {
         property: "og:description",
         content: "Matérias de esporte e cultura pernambucana em veículos de referência.",
@@ -28,15 +27,15 @@ export const Route = createFileRoute("/portfolio")({
 type Filter = "all" | Category;
 
 function Portfolio() {
-  const { t, lang } = useI18n();
+  const { t } = useI18n();
   const [filter, setFilter] = useState<Filter>("all");
 
   const filters: { key: Filter; label: string }[] = [
     { key: "all", label: t("portfolio.all") },
-    { key: "sport", label: t("portfolio.sport") },
-    { key: "culture", label: t("portfolio.culture") },
-    { key: "tv", label: t("portfolio.tv") },
-    { key: "federation", label: t("portfolio.federation") },
+    ...Array.from(new Set(works.map((work) => work.category))).map((category) => ({
+      key: category,
+      label: t(categoryLabelKey[category]),
+    })),
   ];
 
   const filtered = filter === "all" ? works : works.filter((w) => w.category === filter);
@@ -57,6 +56,8 @@ function Portfolio() {
           {filters.map((f) => (
             <button
               key={f.key}
+              type="button"
+              aria-pressed={filter === f.key}
               onClick={() => setFilter(f.key)}
               className={
                 "rounded-sm border px-4 py-2 text-sm font-semibold transition-colors " +
@@ -74,27 +75,7 @@ function Portfolio() {
       <div className="mt-10 columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5">
         {filtered.map((w, i) => (
           <Reveal key={w.id} delay={(i % 3) * 0.06}>
-            <article className="group break-inside-avoid overflow-hidden rounded-sm border border-border bg-card">
-              <div className="relative">
-                <MediaPlaceholder aspect={w.aspect} kind={w.kind} />
-                {w.kind === "video" && (
-                  <span className="absolute right-3 top-3 flex items-center gap-1 rounded-sm bg-primary/85 px-2 py-1 text-[11px] font-semibold text-primary-foreground">
-                    <PlayCircle size={13} /> vídeo
-                  </span>
-                )}
-              </div>
-              <div className="p-5">
-                <span className="text-xs font-semibold uppercase tracking-wide text-secondary">
-                  {t(categoryLabelKey[w.category])} • {w.outlet}
-                </span>
-                <h3 className="mt-2 font-display text-lg text-primary">
-                  {w.title[lang]}
-                </h3>
-                <span className="mt-3 inline-block text-sm font-medium text-muted-foreground group-hover:text-primary">
-                  {t("portfolio.watch")} →
-                </span>
-              </div>
-            </article>
+            <WorkCard work={w} />
           </Reveal>
         ))}
       </div>

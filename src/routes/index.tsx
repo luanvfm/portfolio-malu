@@ -3,7 +3,9 @@ import { ArrowRight, Instagram, Trophy, Landmark, Mic, Megaphone } from "lucide-
 import { useI18n, CONTACT } from "@/lib/i18n";
 import { Reveal } from "@/components/Reveal";
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
-import { works, categoryLabelKey } from "@/lib/portfolio-data";
+import { works } from "@/lib/portfolio-data";
+import { WorkCard } from "@/components/WorkCard";
+import { featuredInstagramPosts } from "@/lib/instagram-posts";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -15,8 +17,8 @@ function Index() {
   const stats = [
     { value: "150+", key: "stats.matterias" as const },
     { value: "80+", key: "stats.jogos" as const },
-    { value: "10k+", key: "stats.seguidores" as const },
-    { value: "4", key: "stats.clubes" as const },
+    { value: "500+", key: "stats.seguidores" as const },
+    { value: "10+", key: "stats.clubes" as const },
   ];
 
   const areas = [
@@ -115,17 +117,7 @@ function Index() {
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {works.slice(0, 3).map((w, i) => (
               <Reveal key={w.id} delay={i * 0.08}>
-                <article className="overflow-hidden rounded-sm border border-border bg-background">
-                  <MediaPlaceholder aspect="video" kind={w.kind} />
-                  <div className="p-5">
-                    <span className="text-xs font-semibold uppercase tracking-wide text-secondary">
-                      {t(categoryLabelKey[w.category])} • {w.outlet}
-                    </span>
-                    <h3 className="mt-2 font-display text-lg text-primary">
-                      {w.title[lang]}
-                    </h3>
-                  </div>
-                </article>
+                <WorkCard work={w} preview />
               </Reveal>
             ))}
           </div>
@@ -141,8 +133,26 @@ function Index() {
           <h2 className="mt-5 font-display text-3xl text-primary">{t("insta.title")}</h2>
           <p className="mx-auto mt-3 max-w-md text-muted-foreground">{t("insta.subtitle")}</p>
           <div className="mx-auto mt-8 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
-            {Array.from({ length: 4 }).map((_, i) => (
-              <MediaPlaceholder key={i} aspect="square" kind="image" label="post" />
+            {featuredInstagramPosts.map((post) => (
+              <a
+                key={post.id}
+                href={post.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${t("insta.open")}: ${post.title[lang]}`}
+                className="group relative aspect-square overflow-hidden rounded-sm bg-secondary"
+              >
+                <img
+                  src={post.image}
+                  alt={post.title[lang]}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent px-3 pb-3 pt-12 text-left text-xs font-medium text-white">
+                  <span className="block truncate">{post.title[lang]}</span>
+                  <span className="block text-white/80">{post.author}</span>
+                </span>
+              </a>
             ))}
           </div>
           <a

@@ -6,16 +6,16 @@ import { Reveal } from "@/components/Reveal";
 export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
-      { title: "Contato — Maria Luiza, Jornalista" },
+      { title: "Contato | Malu Informa" },
       {
         name: "description",
         content:
-          "Entre em contato com Maria Luiza para reportagens, coberturas e parcerias. E-mail, LinkedIn e Instagram @malu.informa.",
+          "Entre em contato com Maria Luiza para reportagens, coberturas e parcerias. E-mail e Instagram @malu.informa.",
       },
-      { property: "og:title", content: "Contato — Maria Luiza, Jornalista" },
+      { property: "og:title", content: "Contato | Malu Informa" },
       {
         property: "og:description",
-        content: "E-mail, LinkedIn e Instagram profissional de Maria Luiza.",
+        content: "E-mail e Instagram profissional de Maria Luiza.",
       },
     ],
   }),
@@ -35,7 +35,7 @@ function Contact() {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "in/maria-luiza",
+      value: CONTACT.linkedin.replace(/^https?:\/\/(www\.)?linkedin\.com\//, ""),
       href: CONTACT.linkedin,
     },
     {
@@ -45,6 +45,7 @@ function Contact() {
       href: CONTACT.instagram,
     },
   ];
+  const availableCards = cards.filter((card) => Boolean(card.href));
 
   return (
     <div className="relative overflow-hidden">
@@ -59,8 +60,8 @@ function Contact() {
           </p>
         </Reveal>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-3">
-          {cards.map((c, i) => (
+        <div className={`mt-12 grid gap-4 ${availableCards.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
+          {availableCards.map((c, i) => (
             <Reveal key={c.label} delay={i * 0.08}>
               <a
                 href={c.href}

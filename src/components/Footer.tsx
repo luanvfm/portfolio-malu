@@ -24,15 +24,17 @@ export function Footer() {
               >
                 <Mail size={18} />
               </a>
-              <a
-                href={CONTACT.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="LinkedIn"
-                className="flex h-10 w-10 items-center justify-center rounded-sm bg-primary-foreground/10 transition-colors hover:bg-accent hover:text-accent-foreground"
-              >
-                <Linkedin size={18} />
-              </a>
+              {CONTACT.linkedin && (
+                <a
+                  href={CONTACT.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="LinkedIn"
+                  className="flex h-10 w-10 items-center justify-center rounded-sm bg-primary-foreground/10 transition-colors hover:bg-accent hover:text-accent-foreground"
+                >
+                  <Linkedin size={18} />
+                </a>
+              )}
               <a
                 href={CONTACT.instagram}
                 target="_blank"

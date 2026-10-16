@@ -3,6 +3,7 @@ import {
   useContext,
   useState,
   useCallback,
+  useEffect,
   type ReactNode,
 } from "react";
 
@@ -69,6 +70,7 @@ export const dict = {
   "portfolio.tv": { pt: "TV", en: "TV" },
   "portfolio.federation": { pt: "Federação", en: "Federation" },
   "portfolio.watch": { pt: "Assistir / ler", en: "Watch / read" },
+  "portfolio.video": { pt: "vídeo", en: "video" },
   "portfolio.mediahint": {
     pt: "Espaço para vídeo ou imagem",
     en: "Space for video or image",
@@ -76,15 +78,16 @@ export const dict = {
 
   "insta.title": { pt: "No Instagram", en: "On Instagram" },
   "insta.subtitle": {
-    pt: "Notícias diárias sobre cultura pernambucana e futebol.",
-    en: "Daily news about Pernambuco culture and football.",
+    pt: "Uma seleção de reportagens, bastidores e momentos de campo.",
+    en: "A selection of reports, behind-the-scenes moments and field coverage.",
   },
   "insta.follow": { pt: "Seguir @malu.informa", en: "Follow @malu.informa" },
+  "insta.open": { pt: "Abrir publicação no Instagram", en: "Open post on Instagram" },
 
   "about.title": { pt: "Sobre Maria Luiza", en: "About Maria Luiza" },
   "about.p1": {
-    pt: "Jornalista pernambucana apaixonada por esporte e cultura. Atuou como repórter de campo em clubes como Sport Recife e Náutico Capibaribe para a BetoCastTV.",
-    en: "Pernambuco journalist passionate about sports and culture. Worked as a field reporter for clubs like Sport Recife and Náutico Capibaribe for BetoCastTV.",
+    pt: "Jornalista pernambucana apaixonada por esporte e cultura, com trabalhos de reportagem de campo para a BetoCastTV e o Mosaico Esportivo na cobertura do futebol.",
+    en: "Pernambuco journalist passionate about sports and culture, with field reporting work for BetoCastTV and Mosaico Esportivo covering football.",
   },
   "about.p2": {
     pt: "Produziu matérias para a TVNova e hoje atua como jornalista e profissional de marketing na Federação Pernambucana de Futsal, além de manter o perfil @malu.informa.",
@@ -99,6 +102,8 @@ export const dict = {
   "tl.2.d": { pt: "Produção e reportagem para a emissora.", en: "Production and reporting for the broadcaster." },
   "tl.3.t": { pt: "Federação Pernambucana de Futsal", en: "Pernambuco Futsal Federation" },
   "tl.3.d": { pt: "Jornalismo e marketing.", en: "Journalism and marketing." },
+  "tl.4.t": { pt: "Repórter de campo — Mosaico Esportivo", en: "Field reporter — Mosaico Esportivo" },
+  "tl.4.d": { pt: "Cobertura esportiva, entrevistas e participações em pré-jogos.", en: "Sports coverage, interviews and pre-match reporting." },
 
   "contact.title": { pt: "Vamos conversar", en: "Let's talk" },
   "contact.subtitle": {
@@ -127,6 +132,9 @@ const I18nContext = createContext<I18nContextValue | null>(null);
 
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [lang, setLang] = useState<Lang>("pt");
+  useEffect(() => {
+    document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
+  }, [lang]);
   const t = useCallback((key: DictKey) => dict[key][lang], [lang]);
   return (
     <I18nContext.Provider value={{ lang, setLang, t }}>
@@ -145,7 +153,7 @@ export function useI18n() {
 export const CONTACT = {
   email: "malu.informa@gmail.com",
   emailHref: "mailto:malu.informa@gmail.com",
-  linkedin: "https://www.linkedin.com/",
+  linkedin: "", // Add the actual profile URL to show LinkedIn in contact links.
   instagram: "https://www.instagram.com/malu.informa",
   instagramHandle: "@malu.informa",
 };
