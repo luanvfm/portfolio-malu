@@ -6,8 +6,7 @@ import { BrandMark } from "@/components/BrandMark";
 export function Footer() {
   const { t } = useI18n();
   return (
-    <footer className="mt-4 md:mt-8">
-      <div className="azulejo h-2 w-full" />
+    <footer>
       <div className="bg-primary text-primary-foreground">
         <div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 sm:grid-cols-2">
           <div>
