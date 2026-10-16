@@ -161,8 +161,8 @@ export const dict = {
   },
 
   "footer.title": {
-    pt: "Vamos tirar sua pauta do papel?",
-    en: "Let’s bring your next story to life.",
+    pt: "Vamos tirar sua pauta **do papel?**",
+    en: "Let’s bring your next story **to life.**",
   },
   "footer.description": {
     pt: "Se você se interessou pelo meu trabalho, vamos conversar sobre o seu **próximo projeto**.",

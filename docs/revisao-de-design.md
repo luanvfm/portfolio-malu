@@ -1,5 +1,13 @@
 # Revisão do acabamento
 
+## Rodapé com referências visuais
+
+Composição refeita a partir dos rodapés de [Carolyn Lee](https://www.footer.design/sites/carolyn-lee), pela personalidade de recortes, e [The Design Society](https://www.footer.design/sites/the-design-society), pela assinatura tipográfica central. As capturas foram analisadas antes da implementação; nenhum ativo desses sites foi incorporado.
+
+Marca Voz no topo, título central com final em itálico terracota, fundo de papel rosado e ação azul. Os três ícones continuam acima do CTA e o convite vem abaixo. Rodapé compartilhado entre as rotas, uma única seção, sem divisórias ou e-mail por extenso. Hover e foco respondem com cor; deslocamento curto do CTA e da seta respeita movimento reduzido.
+
+Verificação: página inicial em 320, 390, 768 e 1440px, em português e inglês, mais transição de Sobre Mim para o rodapé em 1440px. Sem overflow, marcadores de tradução expostos ou exceções JavaScript. Ícones com alvos de 44px, contato mailto correto, hover real e foco de teclado com contorno visível de 3px. Movimento reduzido desativa o deslocamento. TypeScript passou; lint dos arquivos alterados sem erros, com três avisos anteriores de Fast Refresh em i18n.tsx. Detector visual sem ocorrências.
+
 ## Rodapé e ênfase editorial
 
 - Rodapé reformulado com "Vamos tirar sua pauta do papel?", descrição objetiva e CTA "Enviar uma proposta", que abre o e-mail profissional confirmado.

@@ -43,3 +43,7 @@ Texto escuro sobre salmão; texto creme sobre azul/verde. Salmão não é cor de
 ## Interação
 
 Um movimento inicial discreto posiciona o recorte principal. Hover e toque dão retorno aos cartões, botões, indicadores e retrato profissional; as bolinhas da trajetória têm entrada única e resposta a hover/foco; os filtros fazem uma transição curta. Conteúdo visível antes do JavaScript; nenhuma animação infinita ou alteração da rolagem nativa. `prefers-reduced-motion`, foco, Escape e menu móvel acessíveis preservados.
+
+### Fechamento editorial
+
+Rodapé com composição central, papel rosado texturizado, assinatura Voz no topo e chamada Fraunces em duas linhas, com final em itálico terracota. Contatos em ícones com alvo de 44px, botão azul abaixo e convite curto em seguida. Mantém uma única seção, sem divisórias, endereço de e-mail visível ou elementos decorativos externos. Referências de composição: personalidade de recortes do portfólio Carolyn Lee e presença tipográfica central de The Design Society; os ativos, cores e fontes pertencem ao Malu Informa.
