@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import { motion, useReducedMotion } from "motion/react";
 import { useI18n } from "@/lib/i18n";
 import { Reveal } from "@/components/Reveal";
 import { WorkCard } from "@/components/WorkCard";
@@ -24,13 +25,12 @@ export const Route = createFileRoute("/portfolio")({
   }),
   component: Portfolio,
 });
-
 type Filter = "all" | Category;
 
 function Portfolio() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [filter, setFilter] = useState<Filter>("all");
-
+  const reduceMotion = useReducedMotion();
   const filters: { key: Filter; label: string }[] = [
     { key: "all", label: t("portfolio.all") },
     ...Array.from(new Set(works.map((work) => work.category))).map((category) => ({
@@ -38,44 +38,48 @@ function Portfolio() {
       label: t(categoryLabelKey[category]),
     })),
   ];
-
   const filtered = filter === "all" ? works : works.filter((w) => w.category === filter);
-
   return (
-    <div className="mx-auto max-w-6xl px-5 py-16 md:py-20">
-      <Reveal>
+    <div className="journal-page mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <Reveal className="journal-page-heading">
         <h1 className="font-display text-4xl text-primary md:text-5xl">{t("portfolio.title")}</h1>
-        <p className="mt-4 max-w-xl text-lg text-muted-foreground">{t("portfolio.subtitle")}</p>
+        <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted-foreground">
+          {t("portfolio.subtitle")}
+        </p>
       </Reveal>
-
-      <Reveal delay={0.05}>
-        <div className="mt-8 flex flex-wrap gap-2">
-          {filters.map((f) => (
-            <button
-              key={f.key}
-              type="button"
-              aria-pressed={filter === f.key}
-              onClick={() => setFilter(f.key)}
-              className={
-                "min-h-11 rounded-sm border px-4 py-2 text-sm font-semibold transition-colors " +
-                (filter === f.key
-                  ? "border-primary bg-primary text-primary-foreground"
-                  : "border-border bg-card text-muted-foreground hover:border-secondary hover:text-primary")
-              }
-            >
-              {f.label}
-            </button>
-          ))}
-        </div>
-      </Reveal>
-
-      <div className="mt-10 columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5">
-        {filtered.map((w, i) => (
-          <Reveal key={w.id} delay={(i % 3) * 0.06}>
-            <WorkCard work={w} />
-          </Reveal>
+      <div
+        className="journal-filters mt-9 flex flex-wrap gap-3"
+        role="group"
+        aria-label={lang === "pt" ? "Filtrar meu portfólio" : "Filter my work"}
+      >
+        {filters.map((f) => (
+          <button
+            key={f.key}
+            type="button"
+            aria-pressed={filter === f.key}
+            aria-controls="portfolio-results"
+            onClick={() => setFilter(f.key)}
+            className="journal-filter"
+          >
+            {f.label}
+          </button>
         ))}
       </div>
+      <p className="sr-only" aria-live="polite" aria-atomic="true">
+        {filtered.length} {lang === "pt" ? "trabalhos exibidos" : "works shown"}
+      </p>
+      <motion.div
+        id="portfolio-results"
+        key={filter}
+        initial={false}
+        animate={reduceMotion ? undefined : { opacity: [0.65, 1], y: [10, 0] }}
+        transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+        className="journal-portfolio-grid mt-10 columns-1 gap-7 sm:columns-2 lg:columns-3 [&>*]:mb-7"
+      >
+        {filtered.map((w) => (
+          <WorkCard key={w.id} work={w} />
+        ))}
+      </motion.div>
     </div>
   );
 }

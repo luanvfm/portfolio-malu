@@ -1,16 +1,24 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Linkedin, Instagram } from "lucide-react";
 import { useI18n, CONTACT } from "@/lib/i18n";
+import { BrandMark } from "@/components/BrandMark";
 
 export function Footer() {
   const { t } = useI18n();
   return (
-    <footer className="mt-24">
+    <footer className="mt-4 md:mt-8">
       <div className="azulejo h-2 w-full" />
       <div className="bg-primary text-primary-foreground">
         <div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 sm:grid-cols-2">
           <div>
-            <p className="font-display text-2xl">Maria Luiza</p>
+            <Link to="/" className="brand-lockup inline-flex items-center gap-3 rounded-sm">
+              <span className="flex h-14 w-12 items-center justify-center rounded-sm bg-background">
+                <BrandMark className="h-11 w-9" />
+              </span>
+              <span className="brand-wordmark font-display text-2xl tracking-tight">
+                Malu Informa
+              </span>
+            </Link>
             <p className="mt-2 max-w-xs text-sm text-primary-foreground/70">
               {t("footer.tagline")}
             </p>
@@ -20,7 +28,7 @@ export function Footer() {
               <a
                 href={CONTACT.emailHref}
                 aria-label="E-mail"
-                className="flex h-10 w-10 items-center justify-center rounded-sm bg-primary-foreground/10 transition-colors hover:bg-accent hover:text-accent-foreground"
+                className="flex h-11 w-11 items-center justify-center rounded-sm bg-primary-foreground/10 transition-colors hover:bg-accent hover:text-accent-foreground"
               >
                 <Mail size={18} />
               </a>
@@ -30,7 +38,7 @@ export function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="LinkedIn"
-                  className="flex h-10 w-10 items-center justify-center rounded-sm bg-primary-foreground/10 transition-colors hover:bg-accent hover:text-accent-foreground"
+                  className="flex h-11 w-11 items-center justify-center rounded-sm bg-primary-foreground/10 transition-colors hover:bg-accent hover:text-accent-foreground"
                 >
                   <Linkedin size={18} />
                 </a>
@@ -40,12 +48,15 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-sm bg-primary-foreground/10 transition-colors hover:bg-accent hover:text-accent-foreground"
+                className="flex h-11 w-11 items-center justify-center rounded-sm bg-primary-foreground/10 transition-colors hover:bg-accent hover:text-accent-foreground"
               >
                 <Instagram size={18} />
               </a>
             </div>
-            <Link to="/contato" className="text-sm text-primary-foreground/80 underline-offset-4 hover:underline">
+            <Link
+              to="/contato"
+              className="text-sm text-primary-foreground/80 underline-offset-4 hover:underline"
+            >
               {t("nav.contact")}
             </Link>
           </div>

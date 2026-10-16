@@ -48,8 +48,7 @@ function Contact() {
   const availableCards = cards.filter((card) => Boolean(card.href));
 
   return (
-    <div className="relative overflow-hidden">
-      <div className="azulejo absolute inset-0 opacity-[0.1]" />
+    <div className="journal-contact relative overflow-hidden">
       <div className="relative mx-auto max-w-4xl px-5 py-20 md:py-28">
         <Reveal className="text-center">
           <h1 className="font-display text-4xl text-primary md:text-5xl">{t("contact.title")}</h1>
@@ -67,7 +66,7 @@ function Contact() {
                 href={c.href}
                 target={c.href.startsWith("mailto") ? undefined : "_blank"}
                 rel="noreferrer"
-                className="group flex h-full flex-col rounded-sm border border-border bg-card p-6 transition-colors hover:border-accent"
+                className="journal-contact-card group flex h-full flex-col rounded-sm bg-card p-6"
               >
                 <span className="inline-flex h-12 w-12 items-center justify-center rounded-sm bg-secondary/15 text-secondary transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
                   <c.icon size={22} />

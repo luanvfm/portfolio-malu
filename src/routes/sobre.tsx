@@ -41,7 +41,7 @@ function About() {
   ];
 
   return (
-    <div className="mx-auto max-w-6xl px-5 py-16 md:py-24">
+    <div className="journal-about mx-auto max-w-6xl px-5 py-16 md:py-24">
       <div className="grid gap-12 md:grid-cols-[0.9fr_1.1fr] md:items-start">
         <Reveal>
           <div className="relative md:sticky md:top-28">
@@ -49,7 +49,7 @@ function About() {
           </div>
         </Reveal>
         <div>
-          <Reveal>
+          <Reveal className="journal-page-heading">
             <h1 className="font-display text-4xl text-primary md:text-5xl">{t("about.title")}</h1>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{t("about.p1")}</p>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{t("about.p2")}</p>
@@ -57,7 +57,7 @@ function About() {
 
           <Reveal delay={0.1}>
             <h2 className="mt-12 font-display text-2xl text-primary">{t("about.timeline")}</h2>
-            <ol className="mt-6 space-y-6 pl-9">
+            <ol className="journal-timeline mt-6 space-y-6 pl-9">
               {timeline.map((item) => (
                 <li
                   key={item.t}

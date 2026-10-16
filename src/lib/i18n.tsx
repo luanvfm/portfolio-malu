@@ -20,6 +20,11 @@ export const dict = {
     pt: "Meu olhar sobre esporte e cultura",
     en: "My take on sports and culture",
   },
+  "hero.title.intro": { pt: "Meu olhar sobre", en: "My take on" },
+  "hero.title.sport": { pt: "esporte", en: "sports" },
+  "hero.title.and": { pt: "e", en: "and" },
+  "hero.title.culture": { pt: "cultura", en: "culture" },
+  "hero.note": { pt: "Meu caderno de pautas", en: "My reporting notebook" },
   "hero.subtitle": {
     pt: "Produzo reportagens de campo e conteúdo digital sobre esporte e cultura pernambucana.",
     en: "I produce field reports and digital content about sports and Pernambuco culture.",
@@ -56,6 +61,7 @@ export const dict = {
   },
 
   "portfolio.title": { pt: "Meu portfólio", en: "My work" },
+  "portfolio.clippings": { pt: "Recortes do meu trabalho", en: "Clippings from my work" },
   "portfolio.subtitle": {
     pt: "Reuni aqui minhas reportagens, transmissões e produções para diferentes veículos.",
     en: "Here are my reports, broadcasts and productions for different outlets.",

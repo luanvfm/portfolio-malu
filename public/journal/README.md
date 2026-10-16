@@ -1,0 +1,11 @@
+# Textura de papel editorial
+
+`paper-salmon.webp`: imagem decorativa, gerada com a ferramenta integrada `image_gen`, 1536 × 1024. Otimizada em WebP com a API Canvas do navegador, mantendo a composição original. Não é uma fotografia jornalística.
+
+Prompt inicial:
+
+> Create a single subtle real paper texture asset for the background of a modern young Brazilian journalist's editorial scrapbook portfolio website. This is a background ASSET, NOT a website screenshot, NOT a logo, NO typography or letters or symbols. Landscape 3:2. Flatbed overhead photograph of warm ivory uncoated magazine paper with extremely delicate visible natural paper fibers, very low contrast so dark blue text placed on top will be completely readable. Entire central 80 percent and whole left half is a continuous clean warm ivory paper field, softly lit evenly. At the very extreme upper-right edge only, two small layered torn paper scraps in muted azulejo blue #2c7890 and muted coral #d66c4a, authentic irregular hand-torn deckled edges with fine paper fibers, cropped by canvas. Tiny restrained ochre-gold paper sliver at extreme bottom-right edge. These colored pieces take less than 12 percent total image area and are editorial accents, not abstract circles. Overall background #f8f4ea, cream. No burnt edges, no grunge stains, no floral patterns, no notebook rings, no tape, no drawings, no text, no newspaper columns, no photographs, no simulated UI, no shadow effects except very subtle real paper contact shadows at the scraps. This asset will sit behind live website text and a real news photo, so calm blank space is critical. Natural tactile paper feeling but crisp contemporary color. Print editorial cut-paper material.
+
+Prompt de edição para a paleta escolhida:
+
+> Edit this existing paper texture background asset only to fit the newly approved SALMON palette. Preserve composition, blank center, subtle paper fibers, lighting, and the torn paper shapes exactly. Change the small blue paper piece at top-right to muted deep teal #2b6669. Change coral paper piece beneath it to soft salmon #eca18d. Change tiny gold fragment bottom-right to salmon #eca18d as well. Background warm ivory #fbf5ed. No gold or yellow in final asset, no text, no extra objects. This remains a calm real paper background texture for a journalist's modern editorial scrapbook website.

@@ -2,6 +2,7 @@ import { Link, useRouter } from "@tanstack/react-router";
 import { useEffect, useId, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
+import { BrandMark } from "@/components/BrandMark";
 
 const focusStyle =
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-background";
@@ -45,16 +46,13 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-5 px-5 py-3">
         <Link
           to="/"
-          className={`flex min-h-11 shrink-0 items-center gap-2 rounded-sm ${focusStyle}`}
+          className={`brand-lockup flex min-h-11 shrink-0 items-center gap-2 rounded-sm ${focusStyle}`}
           onClick={() => setOpen(false)}
         >
-          <span
-            className="flex h-9 w-9 items-center justify-center rounded-sm bg-primary font-display text-lg text-primary-foreground"
-            aria-hidden="true"
-          >
-            M
+          <BrandMark className="h-11 w-9" />
+          <span className="brand-wordmark font-display text-xl leading-none tracking-tight text-primary sm:text-2xl">
+            Malu Informa
           </span>
-          <span className="font-display text-lg leading-none text-primary">Maria Luiza</span>
         </Link>
 
         <nav aria-label={navLabel} className="hidden items-center gap-6 lg:flex">

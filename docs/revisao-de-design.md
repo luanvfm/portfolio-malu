@@ -29,14 +29,20 @@
 
 As verificações em Chrome headless e emulação de largura não substituem testes em aparelhos físicos.
 
-## Próxima direção depende de aprovação
+## Direção aprovada e aplicada
 
-O usuário solicitou mais presença de cor e interatividade e pediu referências antes da aplicação. Novas fontes, paleta ampliada e animações decorativas aguardam escolha; não fazem parte deste commit.
+Após comparar as propostas, o usuário escolheu A (Fraunces + Work Sans) e a logo Voz. Pediu uma estética jovem de journaling, com recortes de papel e revista, e definiu salmão como a cor principal. Essa direção foi aplicada em uma nova revisão, preservando conteúdo, links e estrutura da faixa de números.
 
-Propostas de tipografia:
+Implementação:
 
-- A: [Fraunces](https://fonts.google.com/specimen/Fraunces) + [Work Sans](https://fonts.google.com/specimen/Work+Sans), editorial com personalidade.
-- B: [Bricolage Grotesque](https://ateliertriay.github.io/bricolage/) + [DM Sans](https://fonts.google.com/specimen/DM+Sans), esportivo e expressivo.
-- C: manter [DM Serif Display](https://fonts.google.com/specimen/DM+Serif+Display) + Work Sans e reforçar azul azulejo e dourado.
+- [Fraunces](https://fonts.google.com/specimen/Fraunces) + [Work Sans](https://fonts.google.com/specimen/Work+Sans), hospedadas localmente em três arquivos WOFF2, total de 132.592 bytes, com licenças OFL.
+- Logo Voz vetorial compartilhada entre cabeçalho e rodapé, com versão para o favicon.
+- Paleta salmão `#ECA18D`, creme `#FBF5ED`, azul profundo `#24394B`, terracota `#983F34` e verde petróleo `#2B6669`.
+- Textura decorativa de papel gerada e otimizada em WebP: 1536 × 1024, 25.652 bytes. Prompt e origem documentados em `public/journal/README.md`.
+- Composição com recortes tipográficos, fita, moldura de papel e anotações sem cobrir títulos ou controles.
+- Transição curta dos filtros, retorno de hover/toque e uma entrada discreta da composição inicial, respeitando movimento reduzido.
+- `DESIGN.md` registra a direção escolhida e `PRODUCT.md` resume público, conteúdo e restrições.
+
+Verificação desta direção: quatro rotas em 390, 768 e 1440px, sem overflow, imagens quebradas ou exceções JavaScript. Fontes e logos carregaram em todas as capturas. Filtros com 2/5/7 resultados, clique na imagem dos cards, menu móvel, troca PT/EN, Escape e movimento reduzido passaram. Combinações principais de texto e fundo têm contraste calculado entre 4,87:1 e 11,72:1.
 
 Referências de interação propostas: [gestos](https://examples.motion.dev/react/gestures), [animação ligada à rolagem](https://motion.dev/docs/react-scroll-animations) e [movimento reduzido](https://motion.dev/docs/react-use-reduced-motion).
