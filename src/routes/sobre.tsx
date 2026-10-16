@@ -1,8 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useI18n, type DictKey } from "@/lib/i18n";
 import { Reveal } from "@/components/Reveal";
-import { FeaturedReport } from "@/components/FeaturedReport";
-import { works } from "@/lib/portfolio-data";
+import { ProfessionalPortrait } from "@/components/ProfessionalPortrait";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -45,7 +44,7 @@ function About() {
       <div className="grid gap-12 md:grid-cols-[0.9fr_1.1fr] md:items-start">
         <Reveal>
           <div className="relative md:sticky md:top-28">
-            <FeaturedReport work={works[0]} />
+            <ProfessionalPortrait />
           </div>
         </Reveal>
         <div>

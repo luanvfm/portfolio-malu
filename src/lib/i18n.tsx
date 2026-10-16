@@ -112,6 +112,11 @@ export const dict = {
   },
   "about.timeline": { pt: "Minha trajetória", en: "My journey" },
   "about.photohint": { pt: "Foto profissional", en: "Professional photo" },
+  "about.portraitAlt": {
+    pt: "Retrato profissional de Maria Luiza, sorrindo, com cabelo solto e blusa preta.",
+    en: "Professional portrait of Maria Luiza smiling, with her hair down and wearing a black top.",
+  },
+  "about.portraitCaption": { pt: "Pode me chamar de Malu.", en: "You can call me Malu." },
 
   "tl.1.t": {
     pt: "Repórter de campo — BetoCastTV",
@@ -189,8 +194,8 @@ export function useI18n() {
 
 // Shared contact info
 export const CONTACT = {
-  email: "malu.informa@gmail.com",
-  emailHref: "mailto:malu.informa@gmail.com",
+  email: "marialuizadecarvalho1201@gmail.com",
+  emailHref: "mailto:marialuizadecarvalho1201@gmail.com",
   linkedin: "https://www.linkedin.com/in/maria-luiza-carvalho-9610a4342/",
   instagram: "https://www.instagram.com/malu.informa",
   instagramHandle: "@malu.informa",

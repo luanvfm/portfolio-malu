@@ -74,11 +74,11 @@ function Contact() {
                 <span className="mt-5 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                   {c.label}
                 </span>
-                <span className="mt-1 flex items-center gap-1 font-display text-lg text-primary">
-                  {c.value}
+                <span className="mt-1 flex min-w-0 items-start gap-1 font-display text-lg text-primary">
+                  <span className="min-w-0 [overflow-wrap:anywhere]">{c.value}</span>
                   <ArrowUpRight
                     size={16}
-                    className="opacity-0 transition-opacity group-hover:opacity-100"
+                    className="mt-1 shrink-0 opacity-0 transition-opacity group-hover:opacity-100"
                   />
                 </span>
               </a>

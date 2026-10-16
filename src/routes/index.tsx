@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { useI18n, CONTACT } from "@/lib/i18n";
 import { Reveal } from "@/components/Reveal";
-import { FeaturedReport } from "@/components/FeaturedReport";
+import { ProfessionalPortrait } from "@/components/ProfessionalPortrait";
 import { works } from "@/lib/portfolio-data";
 import { WorkCard } from "@/components/WorkCard";
 import { featuredInstagramPosts } from "@/lib/instagram-posts";
@@ -61,7 +61,7 @@ function Index() {
             </div>
           </div>
           <div className="journal-hero-media">
-            <FeaturedReport work={works[0]} />
+            <ProfessionalPortrait />
             <div className="journal-note" aria-hidden="true">
               <Quote size={28} strokeWidth={1.7} />
               <p>{t("hero.note")}</p>

@@ -25,6 +25,7 @@ Texto escuro sobre salmão; texto creme sobre azul/verde. Salmão não é cor de
 - Fraunces nos títulos, cortes tipográficos e assinatura; Work Sans nos textos e controles.
 - Fontes WOFF2 locais, com licenças OFL em `public/fonts`.
 - Papel claro, fotografia real em moldura de recorte, fita translúcida, pequenas rotações e anotações em itálico.
+- Retrato profissional fornecido pela proprietária, com remoção do fundo, no destaque inicial e em Sobre Mim. Silhueta com transparência sobre um recorte salmão; o retrato não recebe link ou botão de vídeo. Os trabalhos publicados continuam nos cartões do portfólio.
 - Textura de papel criada com image_gen e otimizada em WebP, 1536 × 1024, cerca de 26kB. É decoração; não representa uma reportagem ou pessoa real.
 - A marca Voz é SVG, compartilhada entre cabeçalho, rodapé e favicon.
 

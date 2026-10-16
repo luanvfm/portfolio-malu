@@ -5,7 +5,7 @@
 ## Alterações concluídas
 
 - Layout original e valores da seção de números preservados: 150+, 80+, 500+ e 10+.
-- Reportagem real de Santa Cruz × Floresta no destaque inicial e na página Sobre Mim. A imagem é identificada como reportagem; o retrato profissional continua opcional.
+- Retrato profissional fornecido pela proprietária, com fundo removido, no destaque inicial e na página Sobre Mim. A reportagem de Santa Cruz × Floresta continua nos cartões do portfólio.
 - Capas verticais sem o recorte horizontal forçado na página inicial.
 - Conteúdo sempre visível antes da hidratação e sem JavaScript; movimento reduzido respeitado.
 - Menu com alvos de toque de 44px, Escape, estado expandido e idioma selecionado acessíveis.
@@ -46,3 +46,11 @@ Implementação:
 Verificação desta direção: quatro rotas em 390, 768 e 1440px, sem overflow, imagens quebradas ou exceções JavaScript. Fontes e logos carregaram em todas as capturas. Filtros com 2/5/7 resultados, clique na imagem dos cards, menu móvel, troca PT/EN, Escape e movimento reduzido passaram. Combinações principais de texto e fundo têm contraste calculado entre 4,87:1 e 11,72:1.
 
 Referências de interação propostas: [gestos](https://examples.motion.dev/react/gestures), [animação ligada à rolagem](https://motion.dev/docs/react-scroll-animations) e [movimento reduzido](https://motion.dev/docs/react-use-reduced-motion).
+
+## Retrato e contato confirmados
+
+- E-mail confirmado pela proprietária: marialuizadecarvalho1201@gmail.com. Links de contato e rodapé atualizados.
+- Retrato sem fundo em PNG, com versões WebP responsivas; transparência conferida no arquivo e no navegador. Fonte e prompt registrados em public/portrait/README.md.
+- Foto e e-mail retirados da lista de pendências.
+- Nova conferência de página inicial, Sobre Mim e contato em dez combinações de largura, incluindo contato em 320px: sem overflow, imagens quebradas ou exceções. Retrato sem link de reportagem; os três cartões reais da prévia foram preservados.
+- TypeScript e compilação de produção passaram; lint sem erros, com os nove avisos existentes de Fast Refresh.

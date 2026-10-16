@@ -12,22 +12,22 @@ Revisado em 16/10/2026. As pendências abaixo são sobre o conteúdo e a publica
 - Capas do Instagram armazenadas no projeto; capas do YouTube carregadas do serviço de imagens do YouTube.
 - Trajetória com BetoCastTV, Mosaico Esportivo, TVNova e Federação.
 - LinkedIn profissional configurado no contato e no rodapé.
+- Foto profissional fornecida, com fundo removido, na página inicial e em Sobre Mim.
+- E-mail confirmado: `marialuizadecarvalho1201@gmail.com`, com links diretos para escrever uma mensagem.
 - Apresentação em primeira pessoa, com página "Sobre Mim" e textos equivalentes em inglês.
 - Título Malu Informa, títulos das páginas sem travessão e ícone da aba.
 - Layout original da seção de números preservado. Valores mantidos: 150+, 80+, 500+ e 10+.
 
 ## Materiais e informações que preciso receber
 
-1. **Foto profissional:** caixas provisórias da página inicial e Sobre substituídas por reportagem real de Santa Cruz × Floresta; um retrato formal ainda pode entrar nas duas. Enviar o arquivo original, caso queira fazer essa substituição.
-2. **E-mail:** confirmar se `malu.informa@gmail.com` é o contato profissional correto. Ele está configurado, mas ainda não foi confirmado pela proprietária.
-3. **Formação:** confirmar o status atual (em formação ou formada), curso, instituição/campus, período e previsão/ano de conclusão. O perfil consultado se apresenta como jornalista em formação na UNINASSAU Graças.
-4. **Trajetória:** datas de início/fim, função e principais atividades em BetoCastTV, Mosaico Esportivo, TVNova e Federação Pernambucana de Futsal. Informar quais vínculos continuam ativos; a ordem atual ainda não é uma cronologia validada.
-5. **TVNova:** pelo menos uma matéria com link e, se houver, o trecho em que Malu aparece. A experiência consta na biografia, mas ainda não há trabalho desse veículo no portfólio.
-6. **Cultura:** uma ou mais reportagens culturais com título e link para sustentar essa área de atuação com exemplos visíveis.
-7. **Papel em cada produção:** informar se Malu fez reportagem, apresentação, entrevistas, roteiro, edição ou mais de uma função. Sem isso, os cartões apresentam o trabalho, sem atribuir funções específicas não confirmadas.
-8. **Minutagem das transmissões longas:** momentos em que Malu participa dos três vídeos da BetoCastTV. Assim poderemos levar o contratante diretamente ao trecho relevante.
-9. **Métricas e contexto:** fontes/períodos de referência para as matérias e jogos destacados, se quiser documentar os resultados para contratantes. `150+` e `80+` foram mantidos conforme sua decisão; o projeto não tem uma base que comprove ou calcule esses valores. `500+` seguidores e `10+` clubes foram fornecidos por você. Nenhum desses números se atualiza sozinho.
-10. **Escopo de contratação:** tipos de trabalho oferecidos, disponibilidade/localidades e melhor canal para propostas. O texto atual de contato é uma apresentação geral.
+1. **Formação:** confirmar o status atual (em formação ou formada), curso, instituição/campus, período e previsão/ano de conclusão. O perfil consultado se apresenta como jornalista em formação na UNINASSAU Graças.
+2. **Trajetória:** datas de início/fim, função e principais atividades em BetoCastTV, Mosaico Esportivo, TVNova e Federação Pernambucana de Futsal. Informar quais vínculos continuam ativos; a ordem atual ainda não é uma cronologia validada.
+3. **TVNova:** pelo menos uma matéria com link e, se houver, o trecho em que Malu aparece. A experiência consta na biografia, mas ainda não há trabalho desse veículo no portfólio.
+4. **Cultura:** uma ou mais reportagens culturais com título e link para sustentar essa área de atuação com exemplos visíveis.
+5. **Papel em cada produção:** informar se Malu fez reportagem, apresentação, entrevistas, roteiro, edição ou mais de uma função. Sem isso, os cartões apresentam o trabalho, sem atribuir funções específicas não confirmadas.
+6. **Minutagem das transmissões longas:** momentos em que Malu participa dos três vídeos da BetoCastTV. Assim poderemos levar o contratante diretamente ao trecho relevante.
+7. **Métricas e contexto:** fontes/períodos de referência para as matérias e jogos destacados, se quiser documentar os resultados para contratantes. `150+` e `80+` foram mantidos conforme sua decisão; o projeto não tem uma base que comprove ou calcule esses valores. `500+` seguidores e `10+` clubes foram fornecidos por você. Nenhum desses números se atualiza sozinho.
+8. **Escopo de contratação:** tipos de trabalho oferecidos, disponibilidade/localidades e melhor canal para propostas. O texto atual de contato é uma apresentação geral.
 
 ## Para publicar e compartilhar
 
@@ -35,7 +35,7 @@ Revisado em 16/10/2026. As pendências abaixo são sobre o conteúdo e a publica
 - Preparar a imagem de compartilhamento (idealmente 1200 × 630) para WhatsApp e redes sociais; ainda não há `og:image`. A foto profissional pode servir de base.
 - Revisar português e inglês dos textos finais depois de receber a biografia e as funções corretas.
 - Verificar a versão final em celular e computador, incluindo foco do teclado e abertura dos links externos.
-- Publicar o código e conferir a versão hospedada. As alterações atuais estão no projeto local.
+- Conferir a versão hospedada na URL final após a sincronização da main com o ambiente de publicação.
 
 ## Melhorias opcionais
 
