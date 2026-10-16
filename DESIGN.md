@@ -36,7 +36,7 @@ Texto escuro sobre salmão; texto creme sobre azul/verde. Salmão não é cor de
 - Manter a estrutura da faixa de números: fundo claro, quatro indicadores, duas colunas no celular e quatro no desktop; valores atuais definidos pelo usuário: 15+ matérias, 15+ jogos, 500+ seguidores e 10+ clubes.
 - Cartões de matérias clicáveis por inteiro; links dos veículos continuam independentes e válidos.
 - Sobre Mim, Minha trajetória e demais textos de apresentação em primeira pessoa.
-- Rodapé com convite para conversar sobre pautas e botão "Enviar uma proposta", ligado diretamente ao e-mail confirmado. A antiga frase sobre identidade pernambucana foi retirada.
+- Rodapé minimalista em uma única seção, com logo no topo, CTA "Enviar uma proposta" e ícones de e-mail, LinkedIn e Instagram. O endereço de e-mail não aparece no rodapé; o ícone e o CTA usam o contato confirmado. Sem divisórias internas ou faixa decorativa antiga.
 - Trechos importantes dos parágrafos destacados com `strong` e peso 650; sublinhado salmão no hover, sem mover palavras ou alterar as quebras de linha. Texto creme nos fundos escuros e versão em inglês equivalente. Os marcadores de ênfase ficam apenas no dicionário local e são renderizados como elementos React, sem HTML dinâmico.
 - Não há conexão com a API do Instagram.
 
