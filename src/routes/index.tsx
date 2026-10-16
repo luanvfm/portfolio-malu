@@ -21,8 +21,8 @@ export const Route = createFileRoute("/")({ component: Index });
 function Index() {
   const { t, lang } = useI18n();
   const stats = [
-    { value: "150+", key: "stats.matterias" as const },
-    { value: "80+", key: "stats.jogos" as const },
+    { value: "15+", key: "stats.matterias" as const },
+    { value: "15+", key: "stats.jogos" as const },
     { value: "500+", key: "stats.seguidores" as const },
     { value: "10+", key: "stats.clubes" as const },
   ];
@@ -73,9 +73,11 @@ function Index() {
       <section className="border-y border-border bg-card">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-5 py-12 md:grid-cols-4">
           {stats.map((s, i) => (
-            <Reveal key={s.key} delay={i * 0.08} className="text-center">
-              <p className="font-display text-4xl text-primary md:text-5xl">{s.value}</p>
-              <p className="mt-1 text-sm text-muted-foreground">{t(s.key)}</p>
+            <Reveal key={s.key} delay={i * 0.08} className="journal-stat text-center">
+              <p className="journal-stat-number font-display text-4xl text-primary md:text-5xl">
+                {s.value}
+              </p>
+              <p className="journal-stat-label mt-1 text-sm text-muted-foreground">{t(s.key)}</p>
             </Reveal>
           ))}
         </div>

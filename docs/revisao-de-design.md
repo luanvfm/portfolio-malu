@@ -4,7 +4,7 @@
 
 ## Alterações concluídas
 
-- Layout original e valores da seção de números preservados: 150+, 80+, 500+ e 10+.
+- Layout original e valores da seção de números preservados: 15+, 15+, 500+ e 10+.
 - Retrato profissional fornecido pela proprietária, com fundo removido, no destaque inicial e na página Sobre Mim. A reportagem de Santa Cruz × Floresta continua nos cartões do portfólio.
 - Capas verticais sem o recorte horizontal forçado na página inicial.
 - Conteúdo sempre visível antes da hidratação e sem JavaScript; movimento reduzido respeitado.
@@ -54,3 +54,14 @@ Referências de interação propostas: [gestos](https://examples.motion.dev/reac
 - Foto e e-mail retirados da lista de pendências.
 - Nova conferência de página inicial, Sobre Mim e contato em dez combinações de largura, incluindo contato em 320px: sem overflow, imagens quebradas ou exceções. Retrato sem link de reportagem; os três cartões reais da prévia foram preservados.
 - TypeScript e compilação de produção passaram; lint sem erros, com os nove avisos existentes de Fast Refresh.
+
+## Interações e fundo de Sobre Mim
+
+- Indicadores de matérias e jogos atualizados para 15+ cada, conforme orientação da proprietária; seguidores e clubes preservados.
+- Hover dos indicadores com recorte salmão e movimento curto, sem alterar a grade original.
+- Retrato profissional com movimento independente da foto, papel e assinatura ao passar o mouse.
+- Fundo de Sobre Mim ocupa toda a largura e pelo menos a altura útil da tela; conteúdo continua com largura máxima para leitura.
+- Bolinhas da trajetória com entrada única em sequência e anel ao passar o mouse ou focar um link da experiência.
+- Movimento reduzido desativa a entrada das bolinhas e os deslocamentos de hover; o retorno de cor continua visível.
+
+Verificação: página inicial e Sobre Mim em 390, 768, 1440 e 1920px, sem overflow ou imagens quebradas. Confirmados os indicadores 15+/15+/500+/10+, grade original 2/4 colunas, fundo ocupando a largura inteira e bolinhas alinhadas à linha. Hover real do mouse confirmou transformações da foto e dos números; entrada, anel e foco de teclado das bolinhas funcionaram. Com movimento reduzido, os deslocamentos e o anel ficam desativados e a mudança de cor permanece. TypeScript, lint e compilação de produção passaram; lint mantém os nove avisos existentes de Fast Refresh.

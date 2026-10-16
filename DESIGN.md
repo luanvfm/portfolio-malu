@@ -33,11 +33,11 @@ Texto escuro sobre salmão; texto creme sobre azul/verde. Salmão não é cor de
 
 - Manter os sete trabalhos reais e os quatro posts selecionados, com links diretos.
 - Não inventar matérias, imagens documentais, vínculos ou dados biográficos.
-- Manter a estrutura da faixa de números: fundo claro, quatro indicadores, duas colunas no celular e quatro no desktop; valores existentes preservados.
+- Manter a estrutura da faixa de números: fundo claro, quatro indicadores, duas colunas no celular e quatro no desktop; valores atuais definidos pelo usuário: 15+ matérias, 15+ jogos, 500+ seguidores e 10+ clubes.
 - Cartões de matérias clicáveis por inteiro; links dos veículos continuam independentes e válidos.
 - Sobre Mim, Minha trajetória e demais textos de apresentação em primeira pessoa.
 - Não há conexão com a API do Instagram.
 
 ## Interação
 
-Um movimento inicial discreto posiciona o recorte principal. Hover e toque dão retorno aos cartões e botões; os filtros fazem uma transição curta. Conteúdo visível antes do JavaScript; nenhuma animação infinita ou alteração da rolagem nativa. `prefers-reduced-motion`, foco, Escape e menu móvel acessíveis preservados.
+Um movimento inicial discreto posiciona o recorte principal. Hover e toque dão retorno aos cartões, botões, indicadores e retrato profissional; as bolinhas da trajetória têm entrada única e resposta a hover/foco; os filtros fazem uma transição curta. Conteúdo visível antes do JavaScript; nenhuma animação infinita ou alteração da rolagem nativa. `prefers-reduced-motion`, foco, Escape e menu móvel acessíveis preservados.

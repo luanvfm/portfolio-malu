@@ -10,7 +10,7 @@ O visitante deve conseguir reconhecer a atuação da jornalista, abrir uma repor
 
 ## Restrições
 
-Preservar trabalhos, links, biografia e seção original de números. Não inventar matérias, depoimentos, retratos ou empresas. Os números existentes devem ser revisados com a proprietária antes de servir como evidência comercial; esta atualização visual não altera seus valores. Dados pendentes estão em `docs/pendencias-do-site.md`.
+Preservar trabalhos, links, biografia e seção original de números. Não inventar matérias, depoimentos, retratos ou empresas. Os indicadores atuais foram definidos pela proprietária: 15+ matérias, 15+ jogos, 500+ seguidores e 10+ clubes. Não são calculados automaticamente. Dados pendentes estão em `docs/pendencias-do-site.md`.
 
 ## Contexto técnico
 

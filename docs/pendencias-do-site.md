@@ -16,7 +16,7 @@ Revisado em 16/10/2026. As pendências abaixo são sobre o conteúdo e a publica
 - E-mail confirmado: `marialuizadecarvalho1201@gmail.com`, com links diretos para escrever uma mensagem.
 - Apresentação em primeira pessoa, com página "Sobre Mim" e textos equivalentes em inglês.
 - Título Malu Informa, títulos das páginas sem travessão e ícone da aba.
-- Layout original da seção de números preservado. Valores mantidos: 150+, 80+, 500+ e 10+.
+- Layout original da seção de números preservado. Valores mantidos: 15+, 15+, 500+ e 10+.
 
 ## Materiais e informações que preciso receber
 
@@ -26,7 +26,7 @@ Revisado em 16/10/2026. As pendências abaixo são sobre o conteúdo e a publica
 4. **Cultura:** uma ou mais reportagens culturais com título e link para sustentar essa área de atuação com exemplos visíveis.
 5. **Papel em cada produção:** informar se Malu fez reportagem, apresentação, entrevistas, roteiro, edição ou mais de uma função. Sem isso, os cartões apresentam o trabalho, sem atribuir funções específicas não confirmadas.
 6. **Minutagem das transmissões longas:** momentos em que Malu participa dos três vídeos da BetoCastTV. Assim poderemos levar o contratante diretamente ao trecho relevante.
-7. **Métricas e contexto:** fontes/períodos de referência para as matérias e jogos destacados, se quiser documentar os resultados para contratantes. `150+` e `80+` foram mantidos conforme sua decisão; o projeto não tem uma base que comprove ou calcule esses valores. `500+` seguidores e `10+` clubes foram fornecidos por você. Nenhum desses números se atualiza sozinho.
+7. **Métricas e contexto:** fontes e períodos de referência dos indicadores, caso queira documentar os resultados para contratantes. Os valores atuais foram fornecidos por você: `15+` matérias, `15+` jogos, `500+` seguidores e `10+` clubes. Nenhum desses números se atualiza sozinho.
 8. **Escopo de contratação:** tipos de trabalho oferecidos, disponibilidade/localidades e melhor canal para propostas. O texto atual de contato é uma apresentação geral.
 
 ## Para publicar e compartilhar

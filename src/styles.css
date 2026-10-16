@@ -333,6 +333,9 @@
   background: var(--journal-soft);
   transform: rotate(-3deg);
   box-shadow: 0 8px 24px var(--journal-paper-shadow);
+  transition:
+    transform 420ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 420ms ease;
 }
 .journal-portrait-art::after {
   content: "";
@@ -344,6 +347,7 @@
   height: 1.3rem;
   background: color-mix(in oklab, var(--accent) 70%, transparent);
   transform: rotate(18deg);
+  transition: transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 .journal-portrait-art img {
   position: relative;
@@ -351,6 +355,8 @@
   width: 100%;
   height: auto;
   object-fit: contain;
+  transform-origin: center bottom;
+  transition: transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 .journal-portrait-caption {
   position: relative;
@@ -360,6 +366,7 @@
   text-align: center;
   background: var(--card);
   transform: rotate(-2deg);
+  transition: transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 @media (min-width: 640px) {
   .journal-portrait {
@@ -552,7 +559,11 @@
   transform: rotate(-2deg);
 }
 .journal-about {
+  width: 100%;
+  min-height: calc(100vh - 4.5rem);
+  min-height: calc(100svh - 4.5rem);
   background-image: url("/journal/paper-salmon.webp");
+  background-position: center;
   background-size: cover;
 }
 .journal-timeline {
@@ -560,6 +571,55 @@
 }
 .journal-timeline li::after {
   background-color: var(--accent);
+}
+.journal-timeline-dot-core {
+  position: relative;
+  transition:
+    transform 260ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 220ms ease;
+}
+.journal-timeline-dot-core::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border: 1px solid var(--secondary);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+.journal-timeline-item:is(:hover, :focus-within) .journal-timeline-dot-core {
+  background-color: var(--accent);
+}
+.journal-stat {
+  position: relative;
+  isolation: isolate;
+}
+.journal-stat::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -0.75rem -0.25rem;
+  background: var(--journal-soft);
+  opacity: 0;
+  transform: scale(0.95) rotate(-2deg);
+  transition:
+    opacity 220ms ease,
+    transform 260ms cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+.journal-stat-number {
+  transition:
+    color 220ms ease,
+    transform 260ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.journal-stat-label {
+  transition: transform 260ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.journal-stat:is(:hover, :active)::before {
+  opacity: 1;
+}
+.journal-stat:is(:hover, :active) .journal-stat-number {
+  color: var(--secondary);
 }
 .journal-contact {
   background: var(--background) url("/journal/paper-salmon.webp") center / cover;
@@ -607,6 +667,28 @@
   }
 }
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .journal-portrait:hover .journal-portrait-art img {
+    transform: translateY(-8px) rotate(0.8deg) scale(1.02);
+  }
+  .journal-portrait:hover .journal-portrait-art::before {
+    transform: translateY(3px) rotate(-5deg);
+    box-shadow: 0 12px 28px var(--journal-paper-shadow);
+  }
+  .journal-portrait:hover .journal-portrait-art::after {
+    transform: rotate(12deg);
+  }
+  .journal-portrait:hover .journal-portrait-caption {
+    transform: translateY(3px) rotate(1deg);
+  }
+  .journal-stat:hover::before {
+    transform: scale(1) rotate(0);
+  }
+  .journal-stat:hover .journal-stat-number {
+    transform: translateY(-4px) scale(1.06);
+  }
+  .journal-stat:hover .journal-stat-label {
+    transform: translateY(2px);
+  }
   .word-cut:hover {
     transform: rotate(0);
   }
@@ -638,6 +720,25 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  .journal-timeline-item:is(:hover, :focus-within) .journal-timeline-dot-core {
+    transform: scale(1.25);
+  }
+  .journal-timeline-item:is(:hover, :focus-within) .journal-timeline-dot-core::after {
+    animation: timeline-ring 650ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  @keyframes timeline-ring {
+    from {
+      transform: scale(0.65);
+      opacity: 0.8;
+    }
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+  .journal-portrait:active .journal-portrait-art img {
+    transform: translateY(-3px) scale(1.01);
+  }
   .journal-hero-media {
     animation: paper-settle 750ms cubic-bezier(0.16, 1, 0.3, 1) both;
   }
